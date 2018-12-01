@@ -1,0 +1,97 @@
+/* *, div, form, input {
+  border: 1px solid grey;
+} */
+
+body {
+  width: 95%;
+  margin: auto;
+}
+
+.filter,
+.layout {
+  float: left;
+  margin-right: 12px;
+}
+
+.card {
+  /* display: inline; */
+  border-radius: 1em;
+  border: 4px solid green;
+  width: 250px;
+  float: left;
+  padding: 10px;
+  margin: 10px;
+}
+
+.clear {
+  clear: both;
+}
+
+.form {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.layout {
+  font-family: 'Archivo Narrow', sans-serif;
+}
+
+img {
+  margin-right: 5px;
+}
+
+img:hover {
+  cursor: pointer;
+}
+
+header {
+  margin-bottom: 1em;
+  margin-left: 200px;
+}
+
+header h1 {
+  font-family: 'Josefin Sans';
+  font-size: 3em;
+  margin-top: 1em;
+  margin-bottom: .5em;
+}
+
+main {
+  margin-top: 2em;
+  width: 90%;
+  margin: auto;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 250px 140px 140px 40px;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+.list div {
+  /* display: inline-grid; */
+  font-family: "Archivo Narrow", sans-serif;
+}
+
+.list div:first-child {
+  font-size: 1.3em;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.card div {
+  padding-bottom: 4px;
+  font-family: "Archivo Narrow", sans-serif;
+}
+
+.card div:first-child {
+  font-size: 1.3em;
+  padding-bottom: 10px;
+  font-family: "Josefin Sans", sans-serif;
+}
