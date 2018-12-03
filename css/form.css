@@ -1,0 +1,47 @@
+form {
+  font-family: "Archivo Narrow", sans-serif;
+  font-size: 1.3em;
+  width: 350px;
+  height: 30 0px; 
+  background-color: white;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+form h1 {
+  font-size: 1.4em; 
+  text-align: center;
+  margin-bottom: 0.6em;
+}
+
+.form-control {
+  display: grid;
+  grid-template-columns: 120px auto;
+  margin-bottom: .4em;
+}
+
+.radio  {
+  float: left;
+}
+
+input[type=text],input[type=number], select {
+  width: 200px;
+  font-family: "Archivo Narrow";
+  font-size: 0.8em;
+}
+
+select {
+  font-family: "Archivo Narrow", sans-serif;
+  font-size: .9em;
+}
+
+input[type=submit], button {
+  font-family: "Archivo Narrow";
+  font-size: 0.9em;
+  border-radius: 3px;
+}
+
+input[type=submit]:hover, button:hover {
+  background-color: blue;
+  color: white;
+}

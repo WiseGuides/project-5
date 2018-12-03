@@ -9,22 +9,42 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href=".css/project4.css" />
+    <link rel="stylesheet" href="./css/form.css" />
     <link rel="stylesheet" href="./css/index.css" />
     <title>Project 5</title>
   </head>
   <body>
-    <header><h1>Employee Admin</h1></header>
-    <main>
-      <div id="listing"></div>
+    <header>
+      <h1>Employees</h1>
+      <div class="layout">
+        <input
+          type="radio"
+          name="layout"
+          id="card"
+          checked
+          onclick="layout(this)"
+        />
+        <label for="card">Card</label>
+      </div>
+      <div class="layout">
+        <input type="radio" name="layout" id="list" onclick="layout(this)" />
+        <label for="list">List</label>
+      </div>
+      <button class="clear" onclick="newEmployee()">Add Employee</button>
+    </header>
+
+    <main></main>
+    <div class="form">
       <form onsubmit="submitForm(event)" name="employeeForm">
+        <h1>Employee Info</h1>
+        <input type="text" id="id" hidden>
         <div class="form-control">
           <label for="first-name">First name: <abbr title="This field is mandatory"></abbr></label>
-          <input type="text" name="firstname" id="first-name" required />
+          <input type="text" name="first-name" id="first-name"  />
         </div>
         <div class="form-control">
           <label for="last-name">Last name:<abbr title="This field is mandatory"></abbr></label>
-          <input type="text" name="lastname" id="last-name" required />
+          <input type="text" name="last-name" id="last-name"  />
         </div>
         <div class="form-control">
           <label for="department">Department:</label>
@@ -37,15 +57,21 @@
         <div class="form-control">
           <label for="pay">Paid</label>
           <div class="radio">
-            <input type="radio" name="pay" id="Hourly" checked />
-            <label for="Hourly">Hourly</label>
-            <input type="radio" name="pay" id="Monthly" />
-            <label for="Monthly">Monthly</label>
+            <input type="radio" name="pay" id="hourly" checked />
+            <label for="hourly">Hourly</label>
+            <input type="radio" name="pay" id="monthly" />
+            <label for="monthly">Monthly</label>
           </div>
         </div>
         <div class="form-control">
           <label for="pay-amount">Pay amount:<abbr title="This field is mandatory"></abbr></label>
-          <input type="number" min="15" name="pay-amount" id="pay-amount" required />
+          <input
+            type="number"
+            min="15"
+            name="pay-amount"
+            id="pay-amount"
+            
+          />
         </div>
         <div class="form-control">
           <label for="type">Type</label>
@@ -56,11 +82,12 @@
             <label for="Management">Management</label>
           </div>
         </div>
-        <input type="submit" value="Save">
+        <input type="submit" value="Save" />
+        <button id="cancel-form" onclick="cancelForm()">Cancel</button>
       </form>
-    </main>
+    </div>
+
     <script src="./javascript/employees.js"></script>
-    <script src="./javascript/project4.js"></script>
     <script src="./javascript/index.js"></script>
   </body>
 </html>

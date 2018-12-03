@@ -1,47 +1,97 @@
-form {
-  font-family: "Archivo Narrow", sans-serif;
-  font-size: 1.3em;
-  width: 350px;
-  height: 30 0px; 
-  background-color: white;
-  padding: 12px;
-  border-radius: 10px;
+/* *, div, form, input {
+  border: 1px solid grey;
+} */
+
+body {
+  width: 95%;
+  margin: auto;
 }
 
-form h1 {
-  font-size: 1.4em; 
-  text-align: center;
-  margin-bottom: 0.6em;
-}
-
-.form-control {
-  display: grid;
-  grid-template-columns: 120px auto;
-  margin-bottom: .4em;
-}
-
-.radio  {
+.filter,
+.layout {
   float: left;
+  margin-right: 12px;
 }
 
-input[type=text],input[type=number], select {
-  width: 200px;
-  font-family: "Archivo Narrow";
-  font-size: 0.8em;
+.card {
+  /* display: inline; */
+  border-radius: 1em;
+  border: 4px solid green;
+  width: 250px;
+  float: left;
+  padding: 10px;
+  margin: 10px;
 }
 
-select {
+.clear {
+  clear: both;
+}
+
+.form {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.8);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.layout {
+  font-family: 'Archivo Narrow', sans-serif;
+}
+
+img {
+  margin-right: 5px;
+}
+
+img:hover {
+  cursor: pointer;
+}
+
+header {
+  margin-bottom: 1em;
+  margin-left: 200px;
+}
+
+header h1 {
+  font-family: 'Josefin Sans';
+  font-size: 3em;
+  margin-top: 1em;
+  margin-bottom: .5em;
+}
+
+main {
+  margin-top: 2em;
+  width: 90%;
+  margin: auto;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 250px 140px 140px 40px;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+.list div {
+  /* display: inline-grid; */
   font-family: "Archivo Narrow", sans-serif;
-  font-size: .9em;
 }
 
-input[type=submit] {
-  font-family: "Archivo Narrow";
-  font-size: 0.9em;
-  border-radius: 3px;
+.list div:first-child {
+  font-size: 1.3em;
+  font-family: "Josefin Sans", sans-serif;
 }
 
-input[type=submit]:hover {
-  background-color: blue;
-  color: white;
+.card div {
+  padding-bottom: 4px;
+  font-family: "Archivo Narrow", sans-serif;
+}
+
+.card div:first-child {
+  font-size: 1.3em;
+  padding-bottom: 10px;
+  font-family: "Josefin Sans", sans-serif;
 }
