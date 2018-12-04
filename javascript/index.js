@@ -7,13 +7,6 @@ function createEmployeeCard(employee) {
   nameElement.appendChild(imgElement);
   let nameText = document.createTextNode(employee.lastName + ', ' + employee.firstName);
   nameElement.appendChild(nameText);
-  
-
-  // let linkElement = document.createElement('a');
-  // linkElement.setAttribute('href', 'editEmployee(' + employee.id + ')');
-
-  // linkElement.appendChild(imgElement);
-  // nameElement.appendChild(linkElement);
 
   let departmentElement = document.createElement('div');
   let departmentText = document.createTextNode(employee.department);
@@ -92,7 +85,7 @@ function submitForm(event) {
     lastName: document.getElementById('last-name').value,
     department: document.getElementById('department').value,
     pay: document.querySelector('input[name="pay"]:checked').id,
-    payAmount: document.getElementById('pay-amount').value,
+    payAmount: parseFloat(document.getElementById('pay-amount').value),
     type: document.querySelector('input[name=type]:checked').id
   }
   upsertEmployees(employee);
@@ -104,11 +97,23 @@ function upsertEmployees(employee) {
 }
 
 function updateEmployee(employee) {
-  console.log('updating employee');
+  // console.log(employee.id);
+  // employees.forEach((record) => { console.log(record.id)});
+  let foundEmployee = employees.find( (record) => { return record.id === parseInt(employee.id)});
+  console.log('foundEmployee', foundEmployee);
+  foundEmployee.firstName = employee.firstName;
+  foundEmployee.lastName = employee.lastName;
+  foundEmployee.department = employee.department;
+  foundEmployee.pay = employee.pay;
+  foundEmployee.payAmount = parseFloat(employee.payAmount);
+  foundEmployee.type = employee.type;
 }
 
 function insertEmployee(employee) {
   console.log('inserting employee');
+  employee.id = employees[employees.length-1].id + 1;
+  employees.push(employee);
+  console.table(employees);
 }
 
 function cancelForm() {
