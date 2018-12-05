@@ -97,8 +97,6 @@ function upsertEmployees(employee) {
 }
 
 function updateEmployee(employee) {
-  // console.log(employee.id);
-  // employees.forEach((record) => { console.log(record.id)});
   let foundEmployee = employees.find( (record) => { return record.id === parseInt(employee.id)});
   console.log('foundEmployee', foundEmployee);
   foundEmployee.firstName = employee.firstName;
