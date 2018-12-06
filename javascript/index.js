@@ -113,7 +113,3 @@ function insertEmployee(employee) {
   employees.push(employee);
   console.table(employees);
 }
-
-function cancelForm() {
-  document.querySelector('.form').style.display='none';
-}
